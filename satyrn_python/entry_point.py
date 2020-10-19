@@ -86,20 +86,15 @@ def main():
         args=parser.parse_args()
         #argsdict=vars(args)
         #args,leftovers=parser.parse_known_args()
-        if args.p:
-            print(args.p)
-            print(type(args.p))
-            if len(args.p) <5:
-                port=args.p
+        if args.port:
+            if len(args.port) <5:
+                port=int(args.port)
             else:
-                p=str(args.p)
                 port=int(p[1:])
 
-        if args.h:
+        if args.hidden:
             url="127.0.0.1"
-        if args.l:
-            print(args.l)
-            print(type(args.l))
-            language=args.l
+        if args.language:
+            language=args.language
             
         start_ui(url, port, interpreter, quiet, language)

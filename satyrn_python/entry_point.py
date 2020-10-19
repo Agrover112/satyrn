@@ -84,11 +84,14 @@ def main():
         parser.add_argument("-h", "--hidden")
         parser.add_argument("-l", "--lang")
         args=parser.parse_args()
+        #argsdict=vars(args)
+        #args,leftovers=parser.parse_known_args()
         if args.p:
-            if len(int(args.p)) <5:
-                port=int(args.p)
+            if len(args.p) <5:
+                port=args.p
             else:
-                port=int(args.p[1:])
+                p=str(args.p)
+                port=int(p[1:])
 
         if args.h:
             url="127.0.0.1"

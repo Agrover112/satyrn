@@ -27,7 +27,7 @@ setuptools.setup(
     author_email="charlesaverill20@gmail.com",
     description="A Notebook alternative that supports branching code",
     long_description=long_description,
-    install_requires=['networkx', 'matplotlib', 'flask', 'cherrypy', 'nbformat', 'beautifulsoup4'],
+    install_requires=['networkx', 'matplotlib', 'flask', 'cherrypy', 'nbformat', 'beautifulsoup4','argpase'],
     long_description_content_type="text/markdown",
     url="https://github.com/CharlesAverill/satyrn/",
     packages=setuptools.find_packages(),

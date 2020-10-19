@@ -1,4 +1,5 @@
 import getopt
+import argparse
 import multiprocessing
 import os
 import sys
@@ -77,16 +78,20 @@ def main():
     if cli_mode:
         start_cli(interpreter)
     else:
-        opts, args = getopt.getopt(arguments, "pl:hq", ["port=", "lang=", "hidden", "quiet"])
-
-        for opt, arg in opts:
-            if opt in ("-p", "--port"):
-                if len(opt) < 5:
-                    port = int(arg)
-                else:
-                    port = int(arg[1:])
-            if opt in ("-h", "--hidden"):
-                url = "127.0.0.1"
-            if opt in ("-l", "--lang"):
-                language = arg
+        #opts, args = getopt.getopt(arguments, "pl:hq", ["port=", "lang=", "hidden", "quiet"])
+        parser=agrparse.ArgumentParser() 
+        parser.add_argument("-p","--port")
+        parser.add_argument("-h", "--hidden")
+        parser.add_argument("-l", "--lang")
+        args=parser.parse_args()
+        if args.p:
+            if len(int(args.p)) <5:
+                port=int(args.p)
+            else:
+                port=int(args.p[1:])
+        if args.h:
+            url="127.0.0.1"
+        if args.l:
+            language=args.l
+            
         start_ui(url, port, interpreter, quiet, language)

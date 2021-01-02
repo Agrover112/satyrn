@@ -62,6 +62,8 @@ your Satyrn instance
 -   `-l n --lang=n` - Sets UI Language. Currently supported:
       - `english` (default)
       - `latin`
+      - `chinese-simplified`
+      - `chinese-traditional`
 
 -   `-q --quiet` - Quiet startup + shutdown
 
@@ -146,6 +148,10 @@ Here, code written in `[ ]` brackets was typed into the text box popup.
 -   [Nathan Huckleberry](https://github.com/Nathan-Huckleberry)
 
 -   [Tristan Wiesepape](https://github.com/qwetboy10)
+
+-   [Agrover](https://github.com/Agrover112)
+
+-   [Umbresp](https://github.com/umbresp)
 
 -   [Merkie](https://github.com/Merkie)
 
